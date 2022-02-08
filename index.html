@@ -18,7 +18,12 @@ THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR I
   <body>
     <h2>Javascript Encryption</h2>
     <div>
-      <p>Using AES-256 in EAX mode with PBKDF2 key derivation using 100,000 iterations.</p>
+      <p>Using PBKDF2 key derivation with 100,000 iterations.</p>
+      <select id="algo">
+        <option value="1">AES-256-EAX</option>
+        <option value="2">Blowfish-448-CBC</option>
+      </select>
+      <br>
       <input id="password" type="password" placeholder="Password">
       <br>
       <input id="confirmPassword" type="password" placeholder="Confirm password">
@@ -58,7 +63,7 @@ THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR I
     </div>
     <div class="small-text">
       <hr>
-      <p>V 2.1 Patch 1</p>
+      <p>V 2.2</p>
       <p id="isitupdate">Up to date!</p>
     </div>
     <script src="./js/crypto-js.min.js"></script>
@@ -68,6 +73,7 @@ THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR I
     <script src="./js/fCrypt.js"></script>
     <script src="./js/gzip.js"></script>
     <script src="./js/password.js"></script>
+    <script src="./js/blowfish.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <script src="./js/auto-update.js"></script>
   </body>
