@@ -7,6 +7,6 @@ Last updated 2/7/2022
 <br>
 <a href="https://JS-Encryption-20.smartcoder21.repl.co">Beta / Test version</a>
 
-PGP Key are in the "Signing" branch
+Signature and PGP public key are on the website
 
 Warning may be buggy
