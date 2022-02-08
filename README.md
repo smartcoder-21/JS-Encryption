@@ -9,6 +9,4 @@ Last updated 2/7/2022
 <br>
 SHA256 Checksum: 470faa97d02f69d0343b7a951c36e56d71573f43ed7402ffc0a683be63e9d3ff
 
-Signature and PGP public key are on the website
-
 Warning may be buggy
