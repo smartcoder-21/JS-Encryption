@@ -11,6 +11,7 @@ var plainTextBox = document.getElementById("ptext");
 var encryptedTextBox = document.getElementById("etext");
 var password = document.getElementById("password");
 var confirmPassword = document.getElementById("confirmPassword");
+var selectBox = document.getElementById("algo");
 
 var inFileData;
 var outFileData;
@@ -38,6 +39,11 @@ function checkPasswords() {
 
 function encrypt() {
   if (checkPasswords() !== false) {
+    if (algo.selectedIndex == 1) {
+      blowfishEncrypt();
+
+      return;
+    }
 
     let salting = generateBytes();
     let nonce = generateBytes();
@@ -61,6 +67,11 @@ function encrypt() {
 
 function decrypt() {
   if (checkPasswords() !== false) {
+    if (algo.selectedIndex == 1) {
+      blowfishDecrypt();
+
+      return;
+    }
 
     let dataArray = atob(encryptedTextBox.value).split("&");
     let salting = dataArray[0];
