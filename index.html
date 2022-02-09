@@ -42,6 +42,7 @@ THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR I
       <p>Using AES-256 in EAX mode with PBKDF2 key derivation using 100,000 iterations.</p>
       <input type="file" onchange="readFile(this)" id="file"><br>
       <p><span class="warning">Avoid encrypting files above 10MB</span></p>
+      <p>Due to a encoding issue it is recomended to zip the file after encryption</p>
       <input type="password" id="filePassword" placeholder="Password"><br>
       <input type="password" id="confirmFilePassword" placeholder="Confirm password"><br>
       <input type="button" onclick="fileEncrypt()" value="Encrypt">
