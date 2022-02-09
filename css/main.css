@@ -3,10 +3,22 @@ body {
   text-align: center;
 }
 
+
 input {
-  padding: 5px;
   margin: 8px;
+  border-radius: 5px;
+  border: solid thin gray;
+  padding: 5px;
 }
+
+input[type="button"]:active {
+  box-shadow: none;
+}
+
+input[type="button"] {
+  box-shadow: 0 2px 2px black;
+}
+
 
 textarea {
   resize: none;
