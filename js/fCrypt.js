@@ -36,7 +36,7 @@ function fileEncrypt() {
       let stringJson = JSON.stringify({name: fileName, data: inFileData});
       let ciphertext = eax.encrypt(stringJson, nonce);
 
-      outFileData = btoa(salting + "&" + nonce + "&" + ciphertext);
+      outFileData = salting + nonce + ciphertext;
       newName = randomClearName();
 
       fileResultDisplay.innerHTML = newName;
@@ -54,10 +54,10 @@ function fileDecrypt() {
   setTimeout(function() {
     if (filePassword.value == confirmFilePassword.value) {
 
-      let dataArray = atob(inFileData).split("&");
-      let salting = dataArray[0];
-      let nonce = dataArray[1];
-      let ciphertext = dataArray[2];
+      let dataArray = inFileData;
+      let salting = dataArray.substr(0, 32);
+      let nonce = dataArray.substr(32, 32);
+      let ciphertext = dataArray.substr(64);
 
       salting = CryptoJS.enc.Hex.parse(salting);
       nonce = CryptoJS.enc.Hex.parse(nonce);

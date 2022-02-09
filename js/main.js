@@ -55,7 +55,7 @@ function encrypt() {
     var ciphertext = eax.encrypt(message, nonce);
 
     if (ciphertext !== false) {
-      encryptedTextBox.value = btoa(salting + "&" + nonce + "&" + ciphertext);
+      encryptedTextBox.value = salting + nonce + CryptoJS.enc.Base64.stringify(ciphertext);
     } else {
       alert("Failed to encrypt check your password...");
     }
@@ -73,14 +73,14 @@ function decrypt() {
       return;
     }
 
-    let dataArray = atob(encryptedTextBox.value).split("&");
-    let salting = dataArray[0];
-    let nonce = dataArray[1];
-    let ciphertext = dataArray[2];
+    let dataArray = encryptedTextBox.value;
+    let salting = dataArray.substr(0, 32);
+    let nonce = dataArray.substr(32, 32);
+    let ciphertext = dataArray.substr(64);
 
     salting = CryptoJS.enc.Hex.parse(salting);
     nonce = CryptoJS.enc.Hex.parse(nonce);
-    ciphertext = CryptoJS.enc.Hex.parse(ciphertext);
+    ciphertext = CryptoJS.enc.Base64.parse(ciphertext);
 
     let key = deriveKey(password.value, salting);
     key = CryptoJS.enc.Hex.parse(key);
