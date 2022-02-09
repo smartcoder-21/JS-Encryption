@@ -10,3 +10,7 @@ Version 2.3 + is incompatible with versions 2.2 and below
 <br>
 
 Warning may be buggy
+
+Libraries used in this project:
+CryptoJS
+cryptojs-extension (all.min.js)
