@@ -89,3 +89,7 @@ function decrypt() {
     alert("Passwords dont match");
   }
 }
+
+function downloadCrypted() {
+  download(encryptedTextBox.value, Math.floor((Math.random() * 999999) + 1).toString() + ".txt", "application/octet-stream");
+}
