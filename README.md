@@ -17,4 +17,4 @@ cryptojs-extension (all.min.js)
 download.js
 
 Notes:
-The password generator uses Math.random only use it if its the only thing you have
+Password generator temporarly disabled / hidden
