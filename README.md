@@ -15,6 +15,3 @@ Libraries used in this project:
 CryptoJS
 cryptojs-extension (all.min.js)
 download.js
-
-Notes:
-Password generator temporarly disabled / hidden
