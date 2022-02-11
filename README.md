@@ -17,10 +17,17 @@ cryptojs-extension (all.min.js)
 download.js
 
 Nots for 2.3
+<br>
 Added some extra styling to the buttons
+<br>
 Added blowfish encryption with a 448 bit key
+<br>
 Removed the split based off of "&" when parsing encrypted data
+<br>
 Removed extra base64 encoding (because there was already base64 encoding)
+<br>
 
 Patch notes for 2.3 Patch 1
+<br>
 Improved the password generation with a cryptographically secure PRNG (CSPRNG / CPRNG)
+<br>
