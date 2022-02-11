@@ -9,7 +9,12 @@ var lowercase = "qwertyuiopasdfghjklzxcvbnm";
 
 // RNG
 function rand() {
-  return Math.floor(Math.random() * (126 - 33 + 1)) + 33;
+  let arrayOfByte = new Uint8Array(1);
+  window.crypto.getRandomValues(arrayOfByte);
+
+  let number = '0.' + arrayOfByte[0].toString();
+
+  return Math.floor(number * (126 - 33 + 1)) + 33;
 }
 
 function calculateEntropy() {
