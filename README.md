@@ -15,3 +15,12 @@ Libraries used in this project:
 CryptoJS
 cryptojs-extension (all.min.js)
 download.js
+
+Nots for 2.3
+Added some extra styling to the buttons
+Added blowfish encryption with a 448 bit key
+Removed the split based off of "&" when parsing encrypted data
+Removed extra base64 encoding (because there was already base64 encoding)
+
+Patch notes for 2.3 Patch 1
+Improved the password generation with a cryptographically secure PRNG (CSPRNG / CPRNG)
